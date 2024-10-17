@@ -1,6 +1,5 @@
 package ALEX_HOFFMANN.primeirob.projetopoo.projeto3;
 
-import javax.websocket.*;
 import java.net.URI;
 import java.util.Scanner;
 
@@ -27,6 +26,7 @@ public class ClienteWebSocket {
 
     // Conecta ao servidor WebSocket
     public static void conectarAoServidor(String uri) {
+        Object ContainerProvider = null;
         WebSocketContainer container = ContainerProvider.getWebSocketContainer();
         try {
             container.connectToServer(ClienteWebSocket.class, URI.create(uri));
